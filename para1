@@ -5,7 +5,7 @@ pipeline{
   choice choices: ['main', 'master'], description: 'this is used to test branch', name: 'Branch'
 }
 stages {
-    stage {
+    stage ('build') {
         steps{
             echo "the depolying to $env"
             echo "the coded for $branch"
