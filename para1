@@ -16,6 +16,7 @@ stages {
 sh '''
 echo "the depolying to $deploy_branch"
             echo "the coded for $deploy_envi"
+'''
         }
     }
 }
