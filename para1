@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+    parameters {
+  string defaultValue: 'test', description: 'this is for env for testing', name: 'env', trim: true
+  choice choices: ['main', 'master'], description: 'this is used to test branch', name: 'Branch'
+}
+stages {
+    stage {
+        steps{
+            echo "the depolying to $env"
+            echo "the coded for $branch"
+        }
+    }
+}
+
+}
