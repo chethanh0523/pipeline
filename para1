@@ -1,13 +1,13 @@
 pipeline{
     agent any
     parameters {
-  string defaultValue: 'test', description: 'this is for env for testing', name: 'env', trim: true
+  string defaultValue: 'test', description: 'this is for env for testing', name: 'ent', trim: true
   choice choices: ['main', 'master'], description: 'this is used to test branch', name: 'Branch'
 
 }
 environment {
 deploy_branch = "$Branch"
-deploy_envi = "$env"
+deploy_envi = "$ent"
 }
 stages {
     stage ('build') {
