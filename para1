@@ -7,8 +7,8 @@ pipeline{
 stages {
     stage ('build') {
         steps{
-            echo "the depolying to $env"
-            echo "the coded for $branch"
+            echo "the depolying to $ {env}"
+            echo "the coded for ${branch}"
         }
     }
 }
