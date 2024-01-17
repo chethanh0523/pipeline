@@ -1,0 +1,16 @@
+pipeline
+{
+    agent any
+    environment {
+        name=chethan
+    }
+    stages {
+        stage 
+        {
+steps
+{
+    echo "The name is $name"
+}
+    }
+}
+}
