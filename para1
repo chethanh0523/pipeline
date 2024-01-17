@@ -3,7 +3,7 @@ pipeline{
     parameters {
   string defaultValue: 'test', description: 'this is for env for testing', name: 'env', trim: true
   choice choices: ['main', 'master'], description: 'this is used to test branch', name: 'Branch'
-echo "$branch"
+
 }
 environment {
 deploy_branch = "$Branch"
@@ -12,10 +12,9 @@ deploy_envi = "$env"
 stages {
     stage ('build') {
         steps{
-            echo "the depolying to ${params.env}"
-            echo "the coded for ${branch}"
+            
 sh '''
-echo "the depolying to ${deploy_branch}"
+echo " ${deploy_branch}"
             echo "the coded for ${deploy_envi}"
 '''
         }
