@@ -2,10 +2,10 @@ pipeline
 {
     agent any
     environment {
-        name=chethan
+        name='chethan'
     }
     stages {
-        stage 
+        stage ('build')
         {
 steps
 {
