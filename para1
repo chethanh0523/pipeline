@@ -3,6 +3,7 @@ pipeline{
     parameters {
   string defaultValue: 'test', description: 'this is for env for testing', name: 'env', trim: true
   choice choices: ['main', 'master'], description: 'this is used to test branch', name: 'Branch'
+echo "$branch"
 }
 environment {
 deploy_branch = "$Branch"
