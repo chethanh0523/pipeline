@@ -9,7 +9,7 @@ pipeline
         {
 steps
 {
-    echo "The name chethan is $name"
+    echo "The name is $name"
 }
     }
 }
